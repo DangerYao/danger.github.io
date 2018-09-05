@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JVM概述 | Danger Yao 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JVM是什么 JVM的作用 Java是如何运行的 JVM的效率怎样   Java的运行方式 在开发工具中运行 双击执行Jar文件 在命令行中运行 在网页中运行  不过，这一切都离不开JRE-Java运行环境    JRE仅仅包括Java程序的必需组件，包括Java虚拟机(JVM)和Java核心类库等JDK(Java开发工具包)包含了JRE，并且还附带了一系列开发和诊断工具 JVM是什么？JVM(">
+  <meta name="description" content="JVM是什么 JVM的作用 Java是如何运行的 JVM的效率怎样  Java的运行方式 在开发工具中运行 双击执行Jar文件 在命令行中运行 在网页中运行  不过，这一切都离不开JRE-Java运行环境    JRE仅仅包括Java程序的必需组件，包括Java虚拟机(JVM)和Java核心类库等JDK(Java开发工具包)包含了JRE，并且还附带了一系列开发和诊断工具 JVM是什么？JVM(J">
 <meta name="keywords" content="technology,java,jvm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM概述">
 <meta property="og:url" content="http://yoursite.com/2018/09/04/JVM概述/index.html">
 <meta property="og:site_name" content="Danger Yao 的博客">
-<meta property="og:description" content="JVM是什么 JVM的作用 Java是如何运行的 JVM的效率怎样   Java的运行方式 在开发工具中运行 双击执行Jar文件 在命令行中运行 在网页中运行  不过，这一切都离不开JRE-Java运行环境    JRE仅仅包括Java程序的必需组件，包括Java虚拟机(JVM)和Java核心类库等JDK(Java开发工具包)包含了JRE，并且还附带了一系列开发和诊断工具 JVM是什么？JVM(">
+<meta property="og:description" content="JVM是什么 JVM的作用 Java是如何运行的 JVM的效率怎样  Java的运行方式 在开发工具中运行 双击执行Jar文件 在命令行中运行 在网页中运行  不过，这一切都离不开JRE-Java运行环境    JRE仅仅包括Java程序的必需组件，包括Java虚拟机(JVM)和Java核心类库等JDK(Java开发工具包)包含了JRE，并且还附带了一系列开发和诊断工具 JVM是什么？JVM(J">
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="https://m.qpic.cn/psb?/V12IxaQC4QCAPb/VmBMCqUDNA8QspZkT0MgaEVxav05AthZRg9wTvsrVyI!/b/dDQBAAAAAAAA&bo=*wLSAf8C0gEDCSw!&rf=viewer_4">
 <meta property="og:image" content="https://m.qpic.cn/psb?/V12IxaQC4QCAPb/jrja8Kq74S9Kev3SxK8lW6soSjt5MeHBf7aEZQMKhaY!/b/dFoAAAAAAAAA&bo=kAIrApACKwIDCSw!&rf=viewer_4">
-<meta property="og:updated_time" content="2018-09-04T10:25:02.092Z">
+<meta property="og:updated_time" content="2018-09-04T10:27:21.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM概述">
-<meta name="twitter:description" content="JVM是什么 JVM的作用 Java是如何运行的 JVM的效率怎样   Java的运行方式 在开发工具中运行 双击执行Jar文件 在命令行中运行 在网页中运行  不过，这一切都离不开JRE-Java运行环境    JRE仅仅包括Java程序的必需组件，包括Java虚拟机(JVM)和Java核心类库等JDK(Java开发工具包)包含了JRE，并且还附带了一系列开发和诊断工具 JVM是什么？JVM(">
+<meta name="twitter:description" content="JVM是什么 JVM的作用 Java是如何运行的 JVM的效率怎样  Java的运行方式 在开发工具中运行 双击执行Jar文件 在命令行中运行 在网页中运行  不过，这一切都离不开JRE-Java运行环境    JRE仅仅包括Java程序的必需组件，包括Java虚拟机(JVM)和Java核心类库等JDK(Java开发工具包)包含了JRE，并且还附带了一系列开发和诊断工具 JVM是什么？JVM(J">
 <meta name="twitter:image" content="https://m.qpic.cn/psb?/V12IxaQC4QCAPb/VmBMCqUDNA8QspZkT0MgaEVxav05AthZRg9wTvsrVyI!/b/dDQBAAAAAAAA&bo=*wLSAf8C0gEDCSw!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="Danger Yao 的博客" type="application/atom+xml">
@@ -186,7 +186,6 @@
 <li>Java是如何运行的</li>
 <li>JVM的效率怎样</li>
 </ul>
-<hr>
 <h5 id="Java的运行方式"><a href="#Java的运行方式" class="headerlink" title="Java的运行方式"></a>Java的运行方式</h5><ul>
 <li>在开发工具中运行</li>
 <li>双击执行Jar文件</li>
