@@ -169,6 +169,113 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Exception-Comparison-method-violates-its-general-contract" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/21/Exception-Comparison-method-violates-its-general-contract/">Exception - Comparison method violates its general contract</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/21/Exception-Comparison-method-violates-its-general-contract/" class="archive-article-date">
+  	<time datetime="2018-09-21T10:29:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="在测试服务器上出现错误"><a href="#在测试服务器上出现错误" class="headerlink" title="在测试服务器上出现错误"></a>在测试服务器上出现错误</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">java.lang.IllegalArgumentException: Comparison method violates its general contract!</span><br><span class="line">        at java.util.TimSort.mergeHi(TimSort.java:899) ~[?:1.8.0_131]</span><br><span class="line">        at java.util.TimSort.mergeAt(TimSort.java:516) ~[?:1.8.0_131]</span><br><span class="line">        at java.util.TimSort.mergeCollapse(TimSort.java:439) ~[?:1.8.0_131]</span><br><span class="line">        at java.util.TimSort.sort(TimSort.java:245) ~[?:1.8.0_131]</span><br><span class="line">        at java.util.Arrays.sort(Arrays.java:1512) ~[?:1.8.0_131]</span><br><span class="line">        at java.util.ArrayList.sort(ArrayList.java:1454) ~[?:1.8.0_131]</span><br><span class="line">        at java.util.Collections.sort(Collections.java:175) ~[?:1.8.0_131]</span><br><span class="line">        at com.mixky.asp.commons.design.util.DesignObjectUtil.sortListWithOrderField(DesignObjectUtil.java:28) ~[commons-core-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.commons.design.cache.impl.DesignResourceCacheImpl.listAllObjects(DesignResourceCacheImpl.java:161) ~[commons-core-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.commons.design.cache.impl.DesignResourceCacheImpl.listAllObjects(DesignResourceCacheImpl.java:65) ~[commons-core-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.commons.design.DesignObjectFactory.listAllObjects(DesignObjectFactory.java:287) ~[commons-core-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.framework.service.impl.ApplicationDesignObjectServiceImpl.listGridDesignObject(ApplicationDesignObjectServiceImpl.java:332) [framework-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.framework.service.ApplicationService.listGridDesignObject(ApplicationService.java:300) [framework-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.framework.rpc.service.designobject.impl.DesignObjectRPCServiceImpl.listGridDesignObject(DesignObjectRPCServiceImpl.java:132) [framework-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.framework.rpc.service.designobject.DesignObjectRPCService$Processor$listGridDesignObject.getResult(DesignObjectRPCService.java:2185) [framework-2.0.jar:?]</span><br><span class="line">        at com.mixky.asp.framework.rpc.service.designobject.DesignObjectRPCService$Processor$listGridDesignObject.getResult(DesignObjectRPCService.java:2170) [framework-2.0.jar:?]</span><br><span class="line">        at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39) [libthrift-0.9.3.jar:0.9.3]</span><br><span class="line">        at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39) [libthrift-0.9.3.jar:0.9.3]</span><br><span class="line">        at org.apache.thrift.TMultiplexedProcessor.process(TMultiplexedProcessor.java:123) [libthrift-0.9.3.jar:0.9.3]</span><br><span class="line">        at org.apache.thrift.server.AbstractNonblockingServer$FrameBuffer.invoke(AbstractNonblockingServer.java:518) [libthrift-0.9.3.jar:0.9.3]</span><br><span class="line">        at org.apache.thrift.server.Invocation.run(Invocation.java:18) [libthrift-0.9.3.jar:0.9.3]</span><br><span class="line">        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]</span><br><span class="line">        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]</span><br><span class="line">        at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]</span><br></pre></td></tr></table></figure>
+<h5 id="定位代码"><a href="#定位代码" class="headerlink" title="定位代码"></a>定位代码</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T extends AbstractDesignObject&gt; <span class="function"><span class="keyword">void</span> <span class="title">sortListWithOrderField</span><span class="params">(List&lt;T&gt; values)</span> </span>&#123;</span><br><span class="line">	Collections.sort(values,<span class="keyword">new</span> Comparator&lt;T&gt;() &#123;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(T o1, T o2)</span> </span>&#123;</span><br><span class="line">			<span class="comment">//进行排序</span></span><br><span class="line">			Integer order1 = o1.getOrder(); <span class="comment">//读取第一个对象的order值</span></span><br><span class="line">			Integer order2 = o2.getOrder(); <span class="comment">//读取第二个对象的order值</span></span><br><span class="line">			<span class="keyword">if</span>(order1 != <span class="keyword">null</span> &amp;&amp; order2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> order1.compareTo(order2);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h5><h6 id="第一种方式-不修改排序代码"><a href="#第一种方式-不修改排序代码" class="headerlink" title="第一种方式 - 不修改排序代码"></a>第一种方式 - 不修改排序代码</h6><p>设置系统属性：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.setProperty(<span class="string">"java.util.Arrays.useLegacyMergeSort"</span>, <span class="string">"true"</span>);</span><br></pre></td></tr></table></figure></p>
+<h6 id="第二种方式-修改排序代码"><a href="#第二种方式-修改排序代码" class="headerlink" title="第二种方式 - 修改排序代码"></a>第二种方式 - 修改排序代码</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public static &lt;T extends AbstractDesignObject&gt; void sortListWithOrderField(List&lt;T&gt; values) &#123;</span><br><span class="line">		Collections.sort(values,new Comparator&lt;T&gt;() &#123;</span><br><span class="line"></span><br><span class="line">			@Override</span><br><span class="line">			public int compare(T o1, T o2) &#123;</span><br><span class="line">				//进行排序</span><br><span class="line">				Integer order1 = o1.getOrder(); //读取第一个对象的order值</span><br><span class="line">				Integer order2 = o2.getOrder(); //读取第二个对象的order值</span><br><span class="line">				</span><br><span class="line">				// 如果都不为空，按order升序排序，否则空值排列在后面</span><br><span class="line">				if(order1 != null &amp;&amp; order2 != null) &#123;</span><br><span class="line">					return order1.compareTo(order2);</span><br><span class="line">				&#125; else if (order1 != null) &#123;</span><br><span class="line">					return -1;</span><br><span class="line">				&#125; else if (order2 != null) &#123;</span><br><span class="line">					return 1;</span><br><span class="line">				&#125; else &#123;</span><br><span class="line">					return 0;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h5><p>从JDK7开始，默认排序使用TimSort,而以前的版本使用的是LegacyMergeSort，TimSort的排序要符合一些规则，官方说明如下：</p>
+<blockquote>
+<p>Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second.In the foregoing description, the notation sgn(expression) designates the mathematical signum function, which is defined to return one of -1, 0, or 1 according to whether the value ofexpression is negative, zero or positive. The implementor must ensure that sgn(compare(x, y)) == -sgn(compare(y, x)) for all x and y. (This implies that compare(x, y) must throw an exception if and only if compare(y, x) throws an exception.) The implementor must also ensure that the relation is transitive: ((compare(x, y)&gt;0) &amp;&amp; (compare(y, z)&gt;0)) implies compare(x, z)&gt;0. Finally, the implementor must ensure that compare(x, y)==0 implies that sgn(compare(x, z))==sgn(compare(y, z)) for all z. It is generally the case, but not strictly required that (compare(x, y)==0) == (x.equals(y)). Generally speaking, any comparator that violates this condition should clearly indicate this fact. The recommended language is “Note: this comparator imposes orderings that are inconsistent with equals.”</p>
+</blockquote>
+<p>意思就是排序代码需要符合三个规则：</p>
+<blockquote>
+<p>对任意对象x,y,z必须满足：<br>1、sgn(compare(x, y)) == -sgn(compare(y, x))<br>2、如果compare(x, y)&gt;0，并且compare(y, z)&gt;0， 意味着 compare(x, z)&gt;0<br>3、如果compare(x, y)==0 意味着 sgn(compare(x, z))==sgn(compare(y, z))</p>
+</blockquote>
+<p>所以最开始的代码违反了规则3：<br>compare(null,2) = 0  但是 sgn(compare(null, 3)) = 0 != sgn(compare(2, 3)) = -1</p>
+<p>修改后的代码就符合上面三个规则了。</p>
+<p>而第一种解决方式是改用以前JDK的实现方式。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">technology</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">notes</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">exception</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/21/Exception-Comparison-method-violates-its-general-contract/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git常用命令记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -414,7 +521,7 @@ var _hmt = _hmt || [];
     		&copy; 2018 Danger Yao
     	</div>
 		<span id="busuanzi_container_site_uv"> 
-		  本站访问人次: <span id="busuanzi_value_site_uv"></span>, 本站访问量：<span id="busuanzi_value_site_pv"></span>
+		  本站访客数: <span id="busuanzi_value_site_uv"></span>, 本站浏览量：<span id="busuanzi_value_site_pv"></span>
 		</span>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -435,7 +542,7 @@ var _hmt = _hmt || [];
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -498,6 +605,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">notes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">exception</a>
               </li>
              
               <li class="article-tag-list-item">
