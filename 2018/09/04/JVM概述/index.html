@@ -402,6 +402,22 @@ var _hmt = _hmt || [];
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2018/09/04/JVM概述/",
+  owner: 'DangerYao',
+  repo: 'git@github.com:DangerYao/dangeryao.github.io.git',
+  oauth: {
+    client_id: 'ee5b6220aa021c95751c',
+    client_secret: 'bf9cd9e950d8631c1575768103d12f3187348d61',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -433,7 +449,7 @@ var _hmt = _hmt || [];
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: true
